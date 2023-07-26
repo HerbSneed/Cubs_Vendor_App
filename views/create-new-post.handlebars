@@ -1,0 +1,28 @@
+<div class="h-screen bg-green-100 pt-4 px-8 ">
+  <div class="border-2 border-emerald-700 w-full">
+    <div class="bg-emerald-700 h-12 py-2 px-6 h-1/6">
+      <h2 class="text-green-100 font-bold text-2xl">Create New Post</h2>      
+    </div>        
+
+    <div class="mb-2 px-6 py-2">
+      <form>
+          <label for="title" class="text-emerald-700 ">Title</label>
+          <br>
+          <input type="text" name="title" id="title" placeholder="" class="bg-white border-4 border-blue-400 w-full my-2 p-3" value="">
+          <label for="content" class="text-emerald-700">Content</label>
+          <br>
+          <textarea type="text" name="content" id="description" placeholder="" class="bg-white w-full border-4 border-blue-400 my-2 p-3 h-1/6" value=""></textarea>
+          <div class="py-1">
+            <button id="newPost" class="bg-emerald-700 text-green-100 px-4 py-3 rounded font-medium w-full">Create</button>             
+          </div>
+      </form>
+    </div>    
+  </div>
+
+  <div class="text-center mt-6">
+    <a href="/create-new-post" class=" bg-emerald-700 text-green-100 px-6 py-3 mb-2 mt-10 text-center rounded-lg font-medium">+New Post</a>
+  </div>
+  
+</div>
+
+<script src="/js/newPost.js"></script>

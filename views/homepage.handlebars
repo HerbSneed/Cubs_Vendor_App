@@ -1,0 +1,46 @@
+<div class="h-screen bg-green-100 pt-4 px-6 py-">
+
+{{#if loggedIn}}
+
+  {{#each posts as |post| }}
+  <a href="/get-single-post/{{post.post_id}}">
+  <div class="border-2 border-emerald-700 mb-4 w-full flex-column">
+
+    <div class="bg-emerald-700 h-12 py-2 px-4">
+        <div class="flex justify-between items-center">
+          <h2 class="text-green-100 font-bold text-2xl">{{post.title}}</h2>
+          <p class="text-green-100 float-right float-top text-md">Posted by {{post.user.username}} on {{formatDate post.createdAt}}</p>
+        </div>
+    </div>
+
+    <div class="py-3 px-4">
+      <div>
+        <p>{{post.description}}</p>
+      </div>
+    </div>
+  </div>
+  {{/each}}
+  </a>
+
+{{else}}
+
+  {{#each posts as |post| }}
+  <div class="border-2 border-emerald-700 mb-4 w-full flex-column">
+
+    <div class="bg-emerald-700 h-12 py-2 px-4">
+      <div class="flex justify-between items-center">
+        <h2 class="text-green-100 font-bold text-2xl">{{post.title}}</h2>
+        <p class="text-green-100 float-right float-top text-md">Posted by {{post.user.username}} on {{formatDate post.createdAt}}</p>
+      </div>
+    </div>
+
+    <div class="py-3 px-4">
+      <div>
+        <p>{{post.description}}</p>
+      </div>
+    </div>
+  </div>
+  {{/each}}
+</div>
+
+{{/if}}

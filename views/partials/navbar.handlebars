@@ -1,0 +1,27 @@
+<nav class="w-full h-36 px-10 py-3 bg-emerald-700">
+{{#if loggedIn}}  
+
+  <div class="flex text-green-100 justify-start gap-10 ">
+    <a class="hover:text-yellow-300" href='/' id='home'>Home</a>
+    <a class="hover:text-yellow-300" href='/dashboard/{{user_id}}'id='dashboard'>Dashboard</a>
+    <a class="hover:text-yellow-300" id="logout" href='/login'>Logout</a>
+  </div>
+
+  <div class="w-52 py-2 mt-5 bg-green-100 rounded-xl shadow-xl ">
+    <h1 class="text-center text-emerald-700 font-bold text-2xl" id='page-title'>The Tech Blog</h1>
+  </div>
+
+{{else}}
+
+  <div class="flex text-green-100 justify-start gap-10 ">
+    <a class="hover:text-yellow-300" href='/'>Home</a>
+    <a class="hover:text-yellow-300" href="/dashboard">Dashboard</a>
+    <a class="hover:text-yellow-300" href='/login'>Login</a>
+  </div>
+
+  <div class="w-52 py-2 mt-5 bg-green-100 rounded-xl shadow-xl ">
+    <h1 class="text-center text-emerald-700 font-bold text-2xl" id='page-title'>The Tech Blog</h1>
+  </div>
+
+{{/if}}
+</nav>

@@ -1,0 +1,18 @@
+<div class="h-screen bg-green-100 px-6 py-2 flex flex-col">
+  {{#if loggedIn}}
+
+  <h1 class="text-center text-emerald-700 font-bold text-2xl" >Your Dashboard</h1>
+
+  {{#each userPosts as |userPost| }}
+  {{> dashboard-card}}
+  {{/each}}
+
+  <a href="/create-new-post" id="newPost" class=" bg-emerald-700 float-bottom text-green-100 px-4 py-3 mb-2 mx-auto text-center rounded rounded-lg font-medium w-44">+New Post</a>
+
+  {{else}}
+
+  <a href="/login" class=" bg-emerald-700 float-bottom text-green-100 px-4 py-3 mb-2 mx-auto text-center rounded rounded-lg font-medium w-44">Login</a>
+
+  {{/if}}
+
+</div>

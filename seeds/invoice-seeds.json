@@ -1,0 +1,33 @@
+[
+   {
+    "invoice_id"
+    "invoice_document"
+    "balance"
+    "vendor_comments"
+    "finance_comments"
+    "status"
+    "vendor_id"
+    "finance_id"
+   },
+   {
+    "invoice_id"
+    "invoice_document"
+    "balance"
+    "vendor_comments"
+    "finance_comments"
+    "status"
+    "vendor_id"
+    "finance_id"
+   }, 
+   { 
+    "invoice_id"
+    "invoice_document"
+    "balance"
+    "vendor_comments"
+    "finance_comments"
+    "status"
+    "vendor_id"
+    "finance_id"
+   }
+
+]
