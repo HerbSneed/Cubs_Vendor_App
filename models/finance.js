@@ -19,11 +19,22 @@ Finance.init(
    type: DataTypes.STRING,
    allowNull: false
   },
+  finance_vendor_comments: {
+   type: DataTypes.STRING(500),
+   allowNull: true,
+  },
   invoice_id: {
    type: DataTypes.INTEGER,
    references: {
     model: 'invoice',
     key: 'invoice_id',
+  },
+  },
+   vendor_id: {
+   type: DataTypes.INTEGER,
+   references: {
+    model: 'vendor',
+    key: 'vendor_id',
    },
   }
  },

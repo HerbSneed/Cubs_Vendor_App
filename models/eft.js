@@ -16,11 +16,11 @@ Eft.init(
       allowNull: false
     },
     account_number: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.BIGINT,
       allowNull: false
     },
     routing_number: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.BIGINT,
       allowNull: false
     },
     vendor_id: {

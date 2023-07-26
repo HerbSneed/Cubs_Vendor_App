@@ -13,11 +13,11 @@ const seedDatabase = async () => {
   await Vendor.bulkCreate(vendorSeeds);
   console.log('\n----- VENDOR SEEDED -----\n');
 
-  await Finance.bulkCreate(financeSeeds);
-  console.log('\n----- FINANCE SEEDED -----\n');
+  // await Finance.bulkCreate(financeSeeds);
+  // console.log('\n----- FINANCE SEEDED -----\n');
 
-  await Invoice.bulkCreate(invoiceSeeds);
-  console.log('\n----- INVOICE SEEDED -----\n');
+  // await Invoice.bulkCreate(invoiceSeeds);
+  // console.log('\n----- INVOICE SEEDED -----\n');
 
   await Eft.bulkCreate(eftSeeds);
   console.log('\n----- EFT SEEDED -----\n');

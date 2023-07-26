@@ -1,60 +1,62 @@
 [
   {
-    "vendor_id"   
-    "vendor_name"
-    "contact_name"
-    "tax_id"
-    "phone_number"
-    "remittance_address"
-    "state"
-    "zip_code"
-    "country"
-    "remittance_email"
-    "service_provided"
-    "minority_ownership"
-    "authorized_name"
-    "authorized_signature"
-    "finance_vendor_comments"
-    "password"
-    "finance_id"
+    "vendor_id": 1,   
+    "vendor_name": "Wooden Nickel Inc",
+    "contact_name": "Herbie Sneed",
+    "tax_id": 54123654,
+    "phone_number": 3234399732,
+    "remittance_address": "654 Triangle Ave",
+    "city": "Kinston",
+    "state": "North Carolina",
+    "zip_code": 27541,
+    "country":  "United States",
+    "remittance_email": "Same As Above",
+    "service_provided": "Photography",
+    "minority_ownership": false,
+    "authorized_name": "James Jones",
+    "authorized_phone_number": 12465821,
+    "authorized_signature": "Signature",
+    "password": 123456789,
+    "finance_id": 1
   },
   {
-    "vendor_id"   
-    "vendor_name"
-    "contact_name"
-    "tax_id"
-    "phone_number"
-    "remittance_address"
-    "state"
-    "zip_code"
-    "country"
-    "remittance_email"
-    "service_provided"
-    "minority_ownership"
-    "authorized_name"
-    "authorized_signature"
-    "finance_vendor_comments"
-    "password"
-    "finance_id"
+    "vendor_id": 2,   
+    "vendor_name": "Sandy Golf",
+    "contact_name": "Apollo Creed",
+    "tax_id": 54145122,
+    "phone_number": 1112199732,
+    "remittance_address": "24 Walsh Street",
+    "city": "Orange",
+    "state": "Nebraska",
+    "zip_code": 11121,
+    "country":  "United States",
+    "remittance_email": "Same As Above",
+    "service_provided": "Photography",
+    "minority_ownership": true,
+    "authorized_name": "Zelda Jackson",
+    "authorized_phone_number": 14521457896,
+    "authorized_signature": "Signature",
+    "password": 7774446789,
+    "finance_id": 2
   },
   {
-    "vendor_id"   
-    "vendor_name"
-    "contact_name"
-    "tax_id"
-    "phone_number"
-    "remittance_address"
-    "state"
-    "zip_code"
-    "country"
-    "remittance_email"
-    "service_provided"
-    "minority_ownership"
-    "authorized_name"
-    "authorized_signature"
-    "finance_vendor_comments"
-    "password"
-    "finance_id"
-  },
-
+    "vendor_id": 3, 
+    "vendor_name": "Acme Tech",
+    "contact_name": "Swity Rich",
+    "tax_id": 87654321,
+    "phone_number": 2120005454,
+    "remittance_address": "654 Rodeo Ave",
+    "city": "Los Angeles",
+    "state": "California",
+    "zip_code": 90006,
+    "country":  "United States",
+    "remittance_email": "Same As Above",
+    "service_provided": "Photography",
+    "minority_ownership": false,
+    "authorized_name": "Author Wilson",
+    "authorized_phone_number": 2125458788,
+    "authorized_signature": "Signature",
+    "password": 123456789,
+    "finance_id": 3
+  }
 ]

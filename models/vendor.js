@@ -5,7 +5,7 @@ const bcrypt = require('bcrypt');
 class Vendor extends Model {}
 
 Vendor.init(
-  {
+    {
     vendor_id: {
       type: DataTypes.INTEGER,
       autoIncrement: true,
@@ -25,10 +25,17 @@ Vendor.init(
       allowNull: false,
     },
     phone_number: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.BIGINT,
+      validate: {
+        len: [10]
+      },
       allowNull: false,
     },
     remittance_address: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    city: {
       type: DataTypes.STRING,
       allowNull: false,
     },
@@ -61,12 +68,15 @@ Vendor.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    authorized_signature: {
-      type: DataTypes.Blob ('long'),
-      allowNull: true,
+    authorized_phone_number: {
+      type: DataTypes.BIGINT,
+      allowNull: false,
+      validate: {
+        len: [10]
+      },
     },
-    finance_vendor_comments: {
-      type: DataTypes.STRING,
+    authorized_signature: {
+      type: DataTypes.BLOB,
       allowNull: true,
     },
     password: {
@@ -76,13 +86,6 @@ Vendor.init(
         len: [6]
       },
     },
-    finance_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: 'finance',
-        key: 'finance_id',
-      },
-    }
   },
   {
   hooks: {
@@ -105,5 +108,6 @@ Vendor.init(
   modelName: 'vendor',
 }
 );
+
 
 module.exports = Vendor;

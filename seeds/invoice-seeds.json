@@ -1,33 +1,33 @@
 [
    {
-    "invoice_id"
-    "invoice_document"
-    "balance"
-    "vendor_comments"
-    "finance_comments"
-    "status"
-    "vendor_id"
-    "finance_id"
+    "invoice_id": 1,
+    "invoice_document": "document",
+    "balance": 16700,
+    "vendor_comments": "ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet felis ut arcu pretium porttitor. Sed pretium elit ac magna rutrum sodales.",
+    "finance_comments": "eros, id vulputate diam consectetur nec. Fusce faucibus, est a tincidunt sollicitudin, tellus est semper mauris, eget ultrices nisl felis vitae ex.",
+    "status": "recieved",
+    "vendor_id": 3,
+    "finance_id": 1
    },
    {
-    "invoice_id"
-    "invoice_document"
-    "balance"
-    "vendor_comments"
-    "finance_comments"
-    "status"
-    "vendor_id"
-    "finance_id"
-   }, 
+   "invoice_id": 2,
+    "invoice_document": "document",
+    "balance": 360700,
+    "vendor_comments": "sit amet, consectetur adipiscing elit. Donec sit amet felis ut arcu pretium porttitor. Sed pretium elit ac magna rutrum sodales.",
+    "finance_comments": "efficitur eros, id vulputate diam consectetur nec. Fusce faucibus, est a tincidunt sollicitudin, tellus est semper mauris, eget ultrices nisl felis vitae ex.",
+    "status": "recieved",
+    "vendor_id": 2,
+    "finance_id": 2
+   },
    { 
-    "invoice_id"
-    "invoice_document"
-    "balance"
-    "vendor_comments"
-    "finance_comments"
-    "status"
-    "vendor_id"
-    "finance_id"
+    "invoice_id": 3,
+    "invoice_document": "document",
+    "balance": 700,
+    "vendor_comments": "consectetur adipiscing elit. Donec sit amet felis ut arcu pretium porttitor. Sed pretium elit ac magna rutrum sodales.",
+    "finance_comments": "vulputate efficitur eros, id vulputate diam consectetur nec. Fusce faucibus, est a tincidunt sollicitudin, tellus est semper mauris, eget ultrices nisl felis vitae ex.",
+    "status": "recieved",
+    "vendor_id": 1,
+    "finance_id": 3
    }
 
 ]

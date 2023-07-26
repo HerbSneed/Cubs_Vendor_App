@@ -1,4 +1,4 @@
-const { User, Post } = require('../models');
+
 
 module.exports = {
    getHomePage: async (req, res) => {

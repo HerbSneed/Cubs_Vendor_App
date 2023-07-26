@@ -20,11 +20,7 @@ Invoice.init(
       allowNull: false
     },
     vendor_comments: {
-      type: DataTypes.INTEGER,
-      allowNull: true,
-    },
-    finance_comments: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.STRING(255),
       allowNull: true,
     },
     status: {
