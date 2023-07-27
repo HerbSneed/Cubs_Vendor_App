@@ -23,13 +23,6 @@ Finance.init(
    type: DataTypes.STRING(500),
    allowNull: true,
   },
-  invoice_id: {
-   type: DataTypes.INTEGER,
-   references: {
-    model: 'invoice',
-    key: 'invoice_id',
-  },
-  },
    vendor_id: {
    type: DataTypes.INTEGER,
    references: {

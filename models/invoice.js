@@ -35,13 +35,6 @@ Invoice.init(
         key: 'vendor_id',
       },
     },
-    finance_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: 'finance',
-        key: 'finance_id',
-      },
-    }
   },
   {
     sequelize,

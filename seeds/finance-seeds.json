@@ -4,20 +4,20 @@
       "first_name": "Jason",
       "last_name": "Dunn",
        "finance_vendor_comments": "Sed vel laoreet turpis. Donec tempus laoreet enim non finibus. Cras sed enim imperdiet, posuere est ac, semper tellus. In lacus erat, tempor nec augue eget, mollis blandit quam. Morbi maximus feugiat lacinia. Vivamus id tortor ac lorem fermentum facilisis.",    
-      "invoice_id": 1
+      "vendor_id": 3
    },
    {
       "finance_id": 2,  
       "first_name": "Brenda", 
       "last_name": "Wilson",
       "finance_vendor_comments": "Sposuere est ac, semper tellus. In lacus erat, tempor nec augue eget, mollis blandit quam. Morbi maximus feugiat lacinia. Vivamus id tortor ac lorem fermentum facilisis.", 
-      "invoice_id": 2  
+      "vendor_id": 2  
    },
    {
       "finance_id": 3,
       "first_name": "Wendy",
       "last_name": "Daniels",
       "finance_vendor_comments": "Donec tempus laoreet enim non finibus. Cras sed enim imperdiet, posuere est ac, semper tellus. In lacus erat, tempor nec augue eget, mollis blandit quam. Morbi maximus feugiat lacinia. Vivamus id tortor ac lorem fermentum facilisis.", 
-      "invoice_id": 3
+      "vendor_id": 1
    }
 ]
