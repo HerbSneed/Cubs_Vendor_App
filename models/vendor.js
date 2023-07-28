@@ -79,28 +79,15 @@ Vendor.init(
       type: DataTypes.BLOB,
       allowNull: true,
     },
-    password: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      validate: {
-        len: [6]
+    user_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'user',
+        key: 'user_id',
       },
-    },
+    }, 
   },
   {
-  hooks: {
-    async beforeCreate(newUserData) {
-      newUserData.password = await bcrypt.hash(newUserData.password, 10);
-      return newUserData;
-    },
-      async beforeUpdate(updatedUserData) {
-        updatedUserData.password = await bcrypt.hash(
-          updatedUserData.password,
-          10
-        );
-        return updatedUserData;
-      },
-  },
   sequelize,
   timestamps: false,
   underscored: true,

@@ -1,3 +1,3 @@
-DROP DATABASE IF EXISTS cubs_vender_db;
+DROP DATABASE IF EXISTS cubs_vendor_db;
 
 CREATE DATABASE cubs_vendor_db;

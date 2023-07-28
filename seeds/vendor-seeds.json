@@ -15,8 +15,7 @@
     "minority_ownership": false,
     "authorized_name": "James Jones",
     "authorized_phone_number": 12465821,
-    "authorized_signature": "Signature",
-    "password": 123456789
+    "authorized_signature": "Signature"
   },
   {
     "vendor_id": 2,   
@@ -34,8 +33,7 @@
     "minority_ownership": true,
     "authorized_name": "Zelda Jackson",
     "authorized_phone_number": 14521457896,
-    "authorized_signature": "Signature",
-    "password": 123456789
+    "authorized_signature": "Signature"
   },
   {
     "vendor_id": 3, 
@@ -53,7 +51,6 @@
     "minority_ownership": false,
     "authorized_name": "Author Wilson",
     "authorized_phone_number": 2125458788,
-    "authorized_signature": "Signature",
-    "password": 123456789
+    "authorized_signature": "Signature"
   }
 ]

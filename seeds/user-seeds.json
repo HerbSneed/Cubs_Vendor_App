@@ -1,0 +1,44 @@
+[
+  {
+    "user_id": 1,   
+    "user_email": "hmsneed@gmail.com",
+    "username": "videoguy79",
+    "status": "vendor",
+    "password": "Abcdefg1!"
+  },
+  {
+    "user_id": 2,   
+    "user_email": "tjones@gmail.com",
+    "username": "techguy79",
+    "status": "vendor",
+    "password": "Abcdefg1!"
+  },
+  {
+    "user_id": 3,   
+    "user_email": "shillybean@gmail.com",
+    "username": "femPost77",
+    "status": "vendor",
+    "password": "Abcdefg1!"
+  },
+  {
+    "user_id": 4,   
+    "user_email": "meanjean@gmail.com",
+    "username": "moneymayne52",
+    "status": "finance",
+    "password": "Abcdefg1!"
+  },
+  {
+    "user_id": 5,   
+    "user_email": "goldenarms@gmail.com",
+    "username": "goldenarms62",
+    "status": "finance",
+    "password": "Abcdefg1!"
+  },
+  {
+    "user_id": 6,   
+    "user_email": "kinfolk@gmail.com",
+    "username": "kinfolk32",
+    "status": "finance",
+    "password": "Abcdefg1!"
+  }
+]

@@ -29,9 +29,16 @@ Finance.init(
     model: 'vendor',
     key: 'vendor_id',
    },
-  }
- },
- {
+  },
+   user_id: {
+    type: DataTypes.INTEGER,
+    references: {
+      model: 'user',
+      key: 'user_id',
+    },
+  },
+ },   
+  {
   sequelize,
   freezeTableName: true,
   underscored: true,

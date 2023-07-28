@@ -2,6 +2,17 @@ const Eft = require('./eft');
 const Invoice = require('./invoice');
 const Vendor = require('./vendor');
 const Finance = require('./finance');
+const User = require('./user');
+
+Vendor.belongsTo(User, {
+  foreignKey: 'user_id',
+  onDelete: 'CASCADE',
+});
+
+Finance.belongsTo(User, {
+  foreignKey: 'user_id',
+  onDelete: 'CASCADE',
+});
 
 Vendor.hasMany(Invoice, {
   foreignKey: 'vendor_id',
@@ -38,4 +49,5 @@ module.exports = {
   Eft,
   Invoice,
   Finance,
+  User,
 };
