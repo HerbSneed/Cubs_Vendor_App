@@ -2,7 +2,7 @@ const sequelize = require('../config/connection');
 
 const { User, Eft, Finance, Invoice, Vendor } = require('../models');
 
-const userSeeds = require('./user-seeds.json');
+// const userSeeds = require('./user-seeds.json');
 const eftSeeds = require('./eft-seeds.json')
 const financeSeeds = require('./finance-seeds.json');
 const invoiceSeeds = require('./invoice-seeds.json');
