@@ -1,41 +1,57 @@
-<div class="min-h-screen bg-[url('/images/Wrigley_Field_02.jpg')] bg-cover bg center pt-4 px-8">
-  <div class="border-2 border-cubblue w-full rounded-2xl">
-    <div class="bg-cubblue h-12 py-2 px-6 h-1/6 rounded-t-xl">
+<div class="min-h-screen bg-[url('/images/Wrigley_Field_02.jpg')] bg-cover bg-center pt-4 px-8">
+
+  <div class="border-4 rounded-2xl border-cubred w-full">
+
+    <div class="bg-cubred h-1/12 py-2 px-6 h-1/6 bg-center bg-contain bg-no-repeat bg bg-[url('/images/CubsProductions_PrimaryLogo.png')] rounded-t-xl">
       <h2 class="text-white font-bold text-2xl">Cubs Productions Vendor Sign Up</h2>
     </div>  
           
-    <div class="bg-white flex flex-wrap flex-col w-6/6 mb-0 px-6 py-2">
+    <div class="bg-white bg-opacity-70 flex rounded-b-xl flex-wrap flex-col mb-0 px-6 py-2">
       <form>
-        <div class="flex">
+        <div class="">
           <div class="flex w-12/12 justify-between">
           {{!-- Basic Info --}}
-          <div id="basic_info" class="bg-cubblue border-2 border-cubred p-3 w-1/2 mr-4">
+          <div id="basic_info" class="bg-cubblue border-2 rounded-xl border-cubred p-3 w-1/2 h-1/4 mr-4">
             <label for="vendor_name" class="text-white">Vendor Name</label>
             <br>
             <input type="text" name="Vendor" id="Vendor" placeholder="Your Vendor Name" class="bg-white w-full my-2 p-3" value="">
 
-            <label for="contact_name" class="text-white">Contact Name</label>
-            <br>
-            <input type="contact_name" name="contact_name" id="contact_name" placeholder="Contact Name" class="bg-white w-full my-2 p-3" value="">
-            
-            <label for="tax-id" class="text-white ">Tax ID/SSN</label>
-            <br>
-            <input type="text" name="Tax Id" id="Tax_Id" placeholder="Your Tax Id or SSN" class="bg-white w-full my-2 p-3" value="">
-            
-            <label for="contact_phone_number" class="text-white">Contact's Phone Number</label>
-            <br>
-            <input type="contact_phone_number" name="contact_phone_number" id="contact_phone_number" placeholder="Contact's Phone Number" class="bg-white w-full my-2 p-3" value="">
+            <label for="contact_info" class="text-white">Contact Name</label>
+
+            <div class="flex flex-wrap justify-between">
+              <input type="text" name="contact_fname" id="contact_fname" placeholder="First Name" class="bg-white w-5/12 my-2 p-3 mr-4" value="">
+
+              <input type="text" name="contact_lame" id="contact_lname" placeholder="Last Name" class="bg-white w-5/12 my-2 p-3 mr-4" value="">
+
+              <input type="text" name="contact_mname" id="contact_mname" placeholder="M.I." class="bg-white w-1/12 my-2 p-3" value="">
+            </div>
+
+            <div class="flex justify-between">
+              <div class="w-6/12 mr-4">
+              <label for="contact_phone_number" class="text-white ">Contact Phone #</label>
+              <br>
+              <input type="number" name="contact_phone_number" id="contact_phone_number" placeholder="Phone Number" class="bg-white my-2 p-3 w-full" value="">
+              </div>
+
+              <div class="w-6/12">
+              <label for="tax-id" class="text-white ">Tax ID/SSN</label>
+              <br>
+              <input type="number" name="Tax Id" id="Tax_Id" placeholder="Tax ID or SSN" class="bg-white  my-2 p-3 w-full" value="">
+              </div>
+              
+            </div>
+
           </div>
 
           {{!-- Locale --}}
-          <div id="locale" class="bg-cubblue border-2 border-cubred p-3 w-1/2">
+          <div id="locale" class="bg-cubblue border-2 border-cubred rounded-xl p-3 w-1/2">
 
             <label for="remittance_address" class="text-white ">Remittance Street Address or P.O. Box</label>
             <br>
             <input type="text" name="remittance_address" id="remittance_address" placeholder="Street Address or P.O. Box" class="bg-white w-full my-2 p-3" value="">
           
             <div class="flex">
-              <div class="w-2/3">
+              <div class="w-2/3 mr-4">
                 <label for="City" class="text-white">City</label>
                 <input type="text" name="City" id="City" placeholder="City" class="bg-white w-full my-2 p-3" value="">
               </div>
@@ -47,7 +63,7 @@
             </div>
 
             <div class="flex">
-              <div class="w-1/3">
+              <div class="w-1/3 mr-4">
                 <label for="zipcode" class="text-white">Zip Code</label>
                 <input type="text" name="zipcode" id="zipcode" placeholder="Zip Code" class="bg-white w-full my-2 p-3" value="">
               </div>
@@ -66,27 +82,27 @@
         </div>
         </div> 
 
-          <p>Except in limited situations, the Company*** is not eligible for any state sales tax exemptions, and as such, expects its vendors and suppliers to charge it the appropriate local sales tax on taxable transactions.  The Company expects sales tax to be collected based on where the goods are shipped. In addition, the Company expects its vendors and suppliers to charge it any other applicable local taxes; i.e. lease tax. Please confirm that you are able to collect the appropriate taxes from the Company under the applicable jurisdiction's tax rules.  If you are unable to collect the appropriate taxes, please let us know so we can set up our processes to report the required taxes.</p>
+          <p class="my-2">Except in limited situations, the Company*** is not eligible for any state sales tax exemptions, and as such, expects its vendors and suppliers to charge it the appropriate local sales tax on taxable transactions.  The Company expects sales tax to be collected based on where the goods are shipped. In addition, the Company expects its vendors and suppliers to charge it any other applicable local taxes; i.e. lease tax. Please confirm that you are able to collect the appropriate taxes from the Company under the applicable jurisdiction's tax rules.  If you are unable to collect the appropriate taxes, please let us know so we can set up our processes to report the required taxes.</p>
 
-          <p class="font-bold">The above-named vendor is able to, and will, charge appropriate local and state sales and other taxes on its invoices:</p>
+          <p class="font-bold my-2">The above-named vendor is able to, and will, charge appropriate local and state sales and other taxes on its invoices:</p>
 
            {{!-- Business Info --}}
-          <div id="business_info" class="bg-cubblue border-2 border-cubred p-3 w-full">
+          <div id="business_info" class="rounded-xl bg-cubblue border-2 border-cubred p-3 w-full">
           
             <div class="flex">
-              <div class="w-4/6">
+              <div class="w-4/6 mr-4">
                 <label for="service_provided" class="text-white">Service Provided</label>
                 <input type="text" name="service_provided" id="service_provided" placeholder="Service Provided" class="bg-white w-full my-2 p-3" value="">
               </div>
 
-              <div class="w-2/6">
+              <div class="w-1/6">
                 <label for="minority_ownership" class="text-white">Minority Ownership</label>
                 <input type="text" name="minority_ownership" id="minority_ownership" placeholder="Minority Owned" class="bg-white w-full my-2 p-3" value="">
               </div>
             </div>
 
             <div class="flex">
-              <div class="w-1/2">
+              <div class="w-1/2 mr-4">
                 <label for="authorized_name" class="text-white">Authorized Name</label>
                 <input type="text" name="authorized_name" id="authorized_name" placeholder="Authorized Name" class="bg-white w-full my-2 p-3" value="">
               </div>
