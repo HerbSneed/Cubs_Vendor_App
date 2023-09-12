@@ -16,19 +16,24 @@ Vendor.init(
       type: DataTypes.STRING,
       allowNull: false
     },
-    contact_name: {
+    contact_firstName: {
       type: DataTypes.STRING,
       allowNull: false
     },
+    contact_lastName: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    contact_MiddleInt: {
+      type: DataTypes.STRING,
+      allowNull: true
+    },
     tax_id: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.STRING,
       allowNull: false,
     },
-    phone_number: {
-      type: DataTypes.BIGINT,
-      validate: {
-        len: [10]
-      },
+    contact_phone_number: {
+      type: DataTypes.STRING,
       allowNull: false,
     },
     remittance_address: {
@@ -61,7 +66,6 @@ Vendor.init(
     },
     minority_ownership: {
       type: DataTypes.BOOLEAN,
-      allowNull: false,
       defaultValue: false
     },  
     authorized_name: {
@@ -69,11 +73,8 @@ Vendor.init(
       allowNull: false,
     },
     authorized_phone_number: {
-      type: DataTypes.BIGINT,
+      type: DataTypes.STRING,
       allowNull: false,
-      validate: {
-        len: [10]
-      },
     },
     authorized_signature: {
       type: DataTypes.BLOB,

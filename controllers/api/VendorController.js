@@ -7,9 +7,11 @@ module.exports = {
     const {
       body: {
         vendor_name,
-        contact_name,
+        contact_firstName,
+        contact_lastName,
+        contact_MiddleInt,
         tax_id,
-        phone_number,
+        contact_phone_number,
         remittance_address,
         city,
         state,
@@ -25,6 +27,7 @@ module.exports = {
     } = req;
     try {
       const vendorData = await Vendor.create(req.body);
+      console.log(vendorData);
       res.status(200).json(vendorData);
     } catch (err) {
       console.log(err);
