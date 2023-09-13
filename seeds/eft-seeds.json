@@ -1,23 +1,23 @@
-[
- {
-   "eft_id": 1,
-   "bank_name": "Chase Bank",
-   "account_number": 987654321987654321,
-   "routing_number": 1111111111,
-   "vendor_id": 3
- },
- {
-   "eft_id": 2,
-   "bank_name": "Bank of America",
-   "account_number": 987654321987654321,
-   "routing_number": 2222222222,
-   "vendor_id": 2
- },
- {
-   "eft_id": 3,
-   "bank_name": "First Union",
-   "account_number": 987654321987654321,
-   "routing_number": 3333333333,
-   "vendor_id": 1
- }
-]
+// [
+//  {
+//    "eft_id": 1,
+//    "bank_name": "Chase Bank",
+//    "account_number": 987654321987654321,
+//    "routing_number": 1111111111,
+//    "vendor_id": 3
+//  },
+//  {
+//    "eft_id": 2,
+//    "bank_name": "Bank of America",
+//    "account_number": 987654321987654321,
+//    "routing_number": 2222222222,
+//    "vendor_id": 2
+//  },
+//  {
+//    "eft_id": 3,
+//    "bank_name": "First Union",
+//    "account_number": 987654321987654321,
+//    "routing_number": 3333333333,
+//    "vendor_id": 1
+//  }
+// ]

@@ -4,127 +4,121 @@
 
     <div class="bg-cubred h-1/12 py-2 px-6 h-1/6 bg-center bg-contain bg-no-repeat bg bg-[url('/images/CubsProductions_PrimaryLogo.png')] rounded-t-xl">
     </div>  
-          
+
     <div class="bg-white bg-opacity-70 flex rounded-b-xl flex-wrap flex-col mb-0 px-6 py-2">
-      <form>
+      <form id="vendorForm">
         <div class="">
           <div class="flex w-12/12 justify-between">
-          {{!-- Basic Info --}}
-          <div id="basic_info" class="bg-cubblue border-2 rounded-xl border-cubred p-3 w-1/2 h-1/4 mr-4">
-            <label for="vendor_name" class="text-white">Vendor Name</label>
-            <br>
-            <input type="text" name="Vendor" id="vendor" placeholder="Your Vendor Name" class="bg-white w-full my-2 p-3" value="">
-
-            <label for="contact_info" class="text-white">Contact Name</label>
-            <div class="flex justify-between">
-              <input type="text" name="contact_f_name" id="contact_f_name" placeholder="First Name" class="bg-white w-5/12 my-2 p-3 mr-4" value="">
-
-              <input type="text" name="contact_l_name" id="contact_l_name" placeholder="Last Name" class="bg-white w-5/12 my-2 p-3 mr-4" value="">
-
-              <input type="text" name="contact_m_init" id="contact_m_init" placeholder="M.I." class="bg-white w-2/12 my-2 p-3" value="">
-            </div>
-
-            <div class="flex justify-between">
-              <div class="w-6/12 mr-4">
-              <label for="contact_phone_number" class="text-white ">Contact Phone #</label>
+            {{!-- Basic Info --}}
+            <div id="basic_info" class="bg-cubblue border-2 rounded-xl border-cubred p-3 w-1/2 h-1/4 mr-4">
+              <label for="vendor_name" class="text-white">Vendor Name</label>
               <br>
-              <input type="tel" name="contact_phone_number" id="contact_phone_number" placeholder="Phone Number" class="bg-white my-2 p-3 w-full" value="">
+              <input type="text" name="Vendor" id="vendor" placeholder="Your Vendor Name" class="bg-white w-full my-2 p-3" value="">
+
+              <label for="contact_info" class="text-white">Contact Name</label>
+              <div class="flex justify-between">
+                <input type="text" name="contact_f_name" id="contact_f_name" placeholder="First Name" class="bg-white w-5/12 my-2 p-3 mr-4" value="">
+
+                <input type="text" name="contact_l_name" id="contact_l_name" placeholder="Last Name" class="bg-white w-5/12 my-2 p-3 mr-4" value="">
+
+                <input type="text" name="contact_m_init" id="contact_m_init" placeholder="M.I." class="bg-white w-2/12 my-2 p-3" value="">
               </div>
 
-              <div class="w-6/12">
-              <label for="tax-id" class="text-white ">Tax ID/SSN</label>
+              <div class="flex justify-between">
+                <div class="w-6/12 mr-4">
+                  <label for="contact_phone_number" class="text-white ">Contact Phone #</label>
+                  <br>
+                  <input type="tel" name="contact_phone_number" id="contact_phone_number" placeholder="Phone Number" class="bg-white my-2 p-3 w-full" value="">
+                </div>
+
+                <div class="w-6/12">
+                  <label for="tax-id" class="text-white ">Tax ID/SSN</label>
+                  <br>
+                  <input type="text" name="Tax Id" id="tax_id" placeholder="Tax ID or SSN" class="bg-white  my-2 p-3 w-full">
+                </div>
+              </div>
+            </div>
+
+            {{!-- Locale --}}
+            <div id="locale" class="bg-cubblue border-2 border-cubred rounded-xl p-3 w-1/2">
+              <label for="remittance_address" class="text-white ">Remittance Street Address or P.O. Box</label>
               <br>
-              <input type="text" name="Tax Id" id="tax_id" placeholder="Tax ID or SSN" class="bg-white  my-2 p-3 w-full"`>
-              </div>
-              
-            </div>
+              <input type="text" name="remittance_address" id="remittance_address" placeholder="Street Address or P.O. Box" class="bg-white w-full my-2 p-3" value="">
 
+              <div class="flex">
+                <div class="w-2/3 mr-4">
+                  <label for="City" class="text-white">City</label>
+                  <input type="text" name="City" id="city" placeholder="City" class="bg-white w-full my-2 p-3" value="">
+                </div>
+
+                <div class="w-1/3">
+                  <label for="state" class="text-white">State</label>
+                  <input type="text" name="State" id="state" placeholder="State" class="bg-white w-full my-2 p-3" value="">
+                </div>
+              </div>
+
+              <div class="flex">
+                <div class="w-1/3 mr-4">
+                  <label for="zipcode" class="text-white">Zip Code</label>
+                  <input type="number" name="zipcode" id="zipcode" placeholder="Zip Code" class="bg-white w-full my-2 p-3" value="">
+                </div>
+
+                <div class="w-1/3">
+                  <label for="country" class="text-white">Country</label>
+                  <input type="text" name="country" id="country" placeholder="Country" class="bg-white w-full my-2 p-3" value="">
+                </div>
+              </div>
+
+              <label for="remittance_email" class="text-white ">Remittance Email</label>
+              <br>
+              <input type="email" name="remittance_email" id="remittance_email" placeholder="Remittance Email" class="bg-white w-full my-2 p-3" value="">
+            </div>
           </div>
-
-          {{!-- Locale --}}
-          <div id="locale" class="bg-cubblue border-2 border-cubred rounded-xl p-3 w-1/2">
-
-            <label for="remittance_address" class="text-white ">Remittance Street Address or P.O. Box</label>
-            <br>
-            <input type="text" name="remittance_address" id="remittance_address" placeholder="Street Address or P.O. Box" class="bg-white w-full my-2 p-3" value="">
-          
-            <div class="flex">
-              <div class="w-2/3 mr-4">
-                <label for="City" class="text-white">City</label>
-                <input type="text" name="City" id="city" placeholder="City" class="bg-white w-full my-2 p-3" value="">
-              </div>
-
-              <div class="w-1/3">
-                <label for="state" class="text-white">State</label>
-                <input type="text" name="State" id="state" placeholder="State" class="bg-white w-full my-2 p-3" value="">
-              </div>
-            </div>
-
-            <div class="flex">
-              <div class="w-1/3 mr-4">
-                <label for="zipcode" class="text-white">Zip Code</label>
-                <input type="number" name="zipcode" id="zipcode" placeholder="Zip Code" class="bg-white w-full my-2 p-3" value="">
-              </div>
-
-              <div class="w-1/3">
-                <label for="country" class="text-white">Country</label>
-                <input type="text" name="country" id="country" placeholder="Country" class="bg-white w-full my-2 p-3" value="">
-              </div>
-            </div>
-
-            <label for="remittance_email" class="text-white ">Remittance Email</label>
-            <br>
-            <input type="email" name="remittance_email" id="remittance_email" placeholder="Remittance Email" class="bg-white w-full my-2 p-3" value="">
-
-          </div>
-        </div>
         </div> 
 
-          <p class="my-2">Except in limited situations, the Company*** is not eligible for any state sales tax exemptions, and as such, expects its vendors and suppliers to charge it the appropriate local sales tax on taxable transactions.  The Company expects sales tax to be collected based on where the goods are shipped. In addition, the Company expects its vendors and suppliers to charge it any other applicable local taxes; i.e. lease tax. Please confirm that you are able to collect the appropriate taxes from the Company under the applicable jurisdiction's tax rules.  If you are unable to collect the appropriate taxes, please let us know so we can set up our processes to report the required taxes.</p>
+        <p class="my-2">Except in limited situations, the Company*** is not eligible for any state sales tax exemptions, and as such, expects its vendors and suppliers to charge it the appropriate local sales tax on taxable transactions.  The Company expects sales tax to be collected based on where the goods are shipped. In addition, the Company expects its vendors and suppliers to charge it any other applicable local taxes; i.e. lease tax. Please confirm that you are able to collect the appropriate taxes from the Company under the applicable jurisdiction's tax rules.  If you are unable to collect the appropriate taxes, please let us know so we can set up our processes to report the required taxes.</p>
 
-          <p class="font-bold my-2">The above-named vendor is able to, and will, charge appropriate local and state sales and other taxes on it's invoices:</p>
+        <p class="font-bold my-2">The above-named vendor is able to, and will, charge appropriate local and state sales and other taxes on its invoices:</p>
 
-           {{!-- Business Info --}}
-          <div id="business_info" class="rounded-xl bg-cubblue border-2 border-cubred p-3 w-full">
-          
-            <div class="flex">
-              <div class="w-4/6 mr-4">
-                <label for="service_provided" class="text-white">Service Provided</label>
-                <input type="text" name="service_provided" id="service_provided" placeholder="Service Provided" class="bg-white w-full my-2 p-3" value="">
-              </div>
+        {{!-- Business Info --}}
+        <div id="business_info" class="rounded-xl bg-cubblue border-2 border-cubred p-3 w-full">
+          <div class="flex">
+            <div class="w-4/6 mr-4">
+              <label for="service_provided" class="text-white">Service Provided</label>
+              <input type="text" name="service_provided" id="service_provided" placeholder="Service Provided" class="bg-white w-full my-2 p-3" value="">
+            </div>
 
-              <div class="w-2/6">
-                <label for="minority_ownership" class="text-white">Minority Ownership</label>
-                <select type="text" name="minority_ownership" id="minority_ownership" placeholder="Minority Owned" class="bg-white w-full my-2 p-3 h-12" value="">
+            <div class="w-2/6">
+              <label for="minority_ownership" class="text-white">Minority Ownership</label>
+              <select type="text" name="minority_ownership" id="minority_ownership" placeholder="Minority Owned" class="bg-white w-full my-2 p-3 h-12" value="">
                 <option value="true">Yes</option>
                 <option value="false">No</option>
-                </select>
-              </div>
+              </select>
             </div>
-
-            <div class="flex">
-              <div class="w-1/2 mr-4">
-                <label for="authorized_name" class="text-white">Authorized Name</label>
-                <input type="text" name="authorized_name" id="authorized_name" placeholder="Authorized Name" class="bg-white w-full my-2 p-3" value="">
-
-                <label for="authorized_phone_number" class="text-white">Authorized Phone Number</label>
-                <input type="text" name="authorized_phone_number" id="authorized_phone_number" placeholder="Authorized Phone Number" class="bg-white w-full my-2 p-3" value=""> 
-              </div>
-
-              <div class="w-1/2">
-                <label for="authorized_signature" class="text-white">Authorized Signature</label>
-                <canvas id="signatureCanvas" class="border bg-white w-full my-2" width="400" height="100"></canvas>
-                <button type="button" id="clearSignature" class="bg-cubred rounded px-2 text-white">Clear Signature</button>
-                <input type="hidden" name="authorized_signature" id="authorized_signature">
-              </div>
-            </div>
-          </div> 
-
-          <div class="py-2 signup">
-            <button id="newVendorSubmit" class="hover:bg-cubred bg-cubblue border-cubred border-2 text-white px-4 py-3 mb-2 rounded-xl font-medium w-full">Submit</button>
           </div>
-      </form>
 
+          <div class="flex">
+            <div class="w-1/2 mr-4">
+              <label for="authorized_name" class="text-white">Authorized Name</label>
+              <input type="text" name="authorized_name" id="authorized_name" placeholder="Authorized Name" class="bg-white w-full my-2 p-3" value="">
+
+              <label for="authorized_phone_number" class="text-white">Authorized Phone Number</label>
+              <input type="text" name="authorized_phone_number" id="authorized_phone_number" placeholder="Authorized Phone Number" class="bg-white w-full my-2 p-3" value=""> 
+            </div>
+
+            <div class="w-1/2">
+              <label for="authorized_signature" class="text-white">Authorized Signature</label>
+              <canvas id="signatureCanvas" class="border bg-white w-full my-2" width="400" height="100"></canvas>
+              <button type="button" id="clearSignature" class="bg-cubred rounded px-2 text-white">Clear Signature</button>
+              <input type="hidden" name="authorized_signature" id="authorized_signature">
+            </div>
+          </div>
+        </div> 
+
+        <div class="py-2 signup">
+          <button type="submit" id="newVendorSubmit" class="hover:bg-cubred bg-cubblue border-cubred border-2 text-white px-4 py-3 mb-2 rounded-xl font-medium w-full">Submit</button>
+        </div>
+      </form>
     </div>
   </div>
 </div>

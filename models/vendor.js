@@ -1,6 +1,5 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
-const bcrypt = require('bcrypt');
 
 class Vendor extends Model {}
 
@@ -78,12 +77,11 @@ Vendor.init(
     },
     authorized_signature: {
       type: DataTypes.BLOB,
-      allowNull: true,
+      allowNull: false,
     },
   },
   {
   sequelize,
-  timestamps: false,
   underscored: true,
   freezeTableName: true,
   modelName: 'vendor',
