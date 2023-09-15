@@ -54,6 +54,9 @@ async function newVendorHandler(event) {
   const minority_ownership = document.querySelector('#minority_ownership').value.trim();
   const authorized_name = document.querySelector('#authorized_name').value.trim();
   const authorized_phone_number = document.querySelector('#authorized_phone_number').value.trim();
+  const bank_name = document.querySelector('#bank_name').value.trim();
+  const account_number = document.querySelector('#account_number').value.trim();
+  const routing_number = document.querySelector('#routing_number').value.trim();
   if (
     vendor_name && 
     contact_firstName && 
@@ -71,7 +74,10 @@ async function newVendorHandler(event) {
     minority_ownership &&
     authorized_name && 
     authorized_phone_number && 
-    authorized_signature
+    signatureInput.value.trim() !== '' && 
+    bank_name &&
+    account_number &&
+    routing_number
     ) {
     const response = await fetch('api/vendor', {
       method: 'POST',
@@ -92,7 +98,10 @@ async function newVendorHandler(event) {
         minority_ownership,
         authorized_name,
         authorized_phone_number,
-        authorized_signature: signatureInput.value
+        authorized_signature: signatureInput.value,
+        bank_name,
+        account_number,
+        routing_number
       }),
       headers: {
         'Content-Type': 'application/json'
@@ -101,7 +110,7 @@ async function newVendorHandler(event) {
     const data = JSON.stringify(response);
     console.log("DATA" + data);
     if (response.ok) {
-      document.location.replace('/eft');
+      document.location.replace('/welcome');
     } else {
       alert('Failed to sign up');
     }

@@ -79,6 +79,18 @@ Vendor.init(
       type: DataTypes.BLOB,
       allowNull: false,
     },
+    bank_name: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    account_number: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    routing_number: {
+      type: DataTypes.STRING,
+      allowNull: false
+    }
   },
   {
   sequelize,
