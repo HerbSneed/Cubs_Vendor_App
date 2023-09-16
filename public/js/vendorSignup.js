@@ -110,7 +110,7 @@ async function newVendorHandler(event) {
     const data = JSON.stringify(response);
     console.log("DATA" + data);
     if (response.ok) {
-      document.location.replace('/welcome');
+      document.location.replace('/submitted');
     } else {
       alert('Failed to sign up');
     }
