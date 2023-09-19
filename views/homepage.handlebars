@@ -1,18 +1,19 @@
   
-<div id="main" class="py-3 lg:py-6 px-2 md:px-4 sm:px-3 lg:px-8 min-h-screen"
-    style="background-image: url('/images/Wrigley_Field_02.jpg'); background-size: cover; background-position: center;">
+<div id="main" class="py-3 lg:py-6 px-2 md:px-4 sm:px-3 lg:px-8         
+min-h-screen" style="background-image: url('/images/Wrigley_Field_02.jpg'); background-size: cover; background-position: center;">
       
   <div class="border-4 rounded-2xl border-cubred">
+
       <div class="bg-cubred px-6 h-1/6 rounded-t-xl bg-center bg-contain bg-no-repeat bg bg-[url('/images/CubsProductions_PrimaryLogo.png')]">
       </div>  
 
     <form id="vendorForm">  
-      <div class="bg-white bg-opacity-70 rounded-b-xl px-2 py-2">
+      <div class="bg-white bg-opacity-70  rounded-b-xl px-2 py-2">
 
-        <div class="flex flex-col w-12/12 gap-x-2 xl:flex-row xl:gap-x-2 xl:justify-between">
+        <div class="flex flex-col w-12/12 gap-x-2 lg:flex-row lg:h-auto lg:gap-x-2 lg:justify-between">
 
           {{!-- Basic Info --}}
-          <div id="basic_info" class="bg-cubblue border-2 rounded-xl border-cubred p-3 w-full h-1/4 xl:w-1/2 xl:flex-auto">
+          <div id="basic_info" class="bg-cubblue border-2 rounded-xl border-cubred p-3 w-full h-1/4 lg:w-1/2 xl:w-1/2 lg:flex-auto">
 
             <label for="vendor_name" class="text-white">Vendor Name</label>
             <input type="text" name="Vendor" id="vendor" placeholder="Your Vendor Name" class="bg-white w-full my-2 p-3" value="">
@@ -42,38 +43,37 @@
           </div>
 
               {{!-- Locale --}}
-          <div id="locale" class="bg-cubblue border-2 border-cubred rounded-xl p-3 w-full xl:w-1/2 mt-2 xl:mt-0 xl:flex-auto">
+          <div id="locale" class="bg-cubblue border-2 border-cubred rounded-xl flex flex-wrap gap-x-2 p-3 w-full lg:w-1/2 xl:w-1/2 mt-2 lg:mt-0 lg:flex-auto">
 
+            <div class="flex flex-col w-full sm:w-2/3">
             <label for="remittance_address" class="text-white ">Remittance Street Address or P.O. Box</label>
-            <br>
-            <input type="text" name="remittance_address" id="remittance_address" placeholder="Street Address or P.O. Box" class="bg-white w-full md:w-full sm:w-7/12 my-2 p-3" value="">
-
-            <div class="flex flex-row justify-start flex-wrap w-full gap-x-2">
-
-              <div class="flex flex-col w-2/3">
-                <label for="City" class="text-white">City</label>
-                <input type="text" name="City" id="city" placeholder="City" class="bg-white my-2 p-3" value="">
-              </div>
-              
-              <div class="flex flex-col w-1/4 flex-auto">
-                <label for="state" class="text-white">State</label>
-                <input type="text" name="State" id="state" placeholder="State" class="bg-white my-2 p-3" value="">
-              </div>
-
-              <div class="flex flex-col w-1/4 flex-auto">
-                <label for="zipcode" class="text-white">Zip Code</label>
-                <input type="number" name="zipcode" id="zipcode" placeholder="Zip Code" class="bg-white my-2 p-3" value="">
-              </div>
-              
-              <div class="flex flex-col w-1/4 flex-auto">
-                <label for="country" class="text-white">Country</label>
-                <input type="text" name="country" id="country" placeholder="Country" class="bg-white my-2 p-3" value="">
-              </div>
-
+            <input type="text" name="remittance_address" id="remittance_address" placeholder="Street Address or P.O. Box" class="bg-white my-2 p-3" value="">
             </div>
 
-            <label for="remittance_email" class="text-white ">Remittance Email</label>
-            <input type="email" name="remittance_email" id="remittance_email" placeholder="Remittance Email" class="bg-white my-2 p-3 w-full" value="">
+            <div class="flex flex-col w-2/3 sm:w-1/4 flex-auto">
+              <label for="City" class="text-white">City</label>
+              <input type="text" name="City" id="city" placeholder="City" class="bg-white my-2 p-3" value="">
+            </div>
+            
+            <div class="flex flex-col w-1/4 sm:w-1/3 flex-auto">
+              <label for="state" class="text-white">State</label>
+              <input type="text" name="State" id="state" placeholder="State" class="bg-white my-2 p-3" value="">
+            </div>
+
+            <div class="flex flex-col w-2/4 sm:w-1/3">
+              <label for="zipcode" class="text-white">Zip Code</label>
+              <input type="number" name="zipcode" id="zipcode" placeholder="Zip Code" class="bg-white my-2 p-3" value="">
+            </div>
+            
+            <div class="flex flex-col w-1/4 flex-auto">
+              <label for="country" class="text-white">Country</label>
+              <input type="text" name="country" id="country" placeholder="Country" class="bg-white my-2 p-3" value="">
+            </div>
+
+            <div class="flex flex-col w-2/4 flex-auto">
+              <label for="remittance_email" class="text-white ">Remittance Email</label>
+              <input type="email" name="remittance_email" id="remittance_email" placeholder="Remittance Email" class="bg-white my-2 p-3 w-full" value="">
+            </div>
             
           </div>
         </div>
@@ -83,76 +83,90 @@
 
           <p class="font-bold my-2">The above-named vendor is able to, and will, charge appropriate local and state sales and other taxes on its invoices:</p>
 
-          <div class="flex flex-col w-12/12 xl:flex-row xl:gap-x-2 xl:justify-between">
+        <div class="flex flex-col w-full gap-x-2 gap-y-2 lg:flex-row">
 
           {{!-- Business Info --}}
-            <div id="business_info" class="rounded-xl bg-cubblue border-2 border-cubred p-3 mb-2 xl:w-1/2 xl:flex-auto">
+            <div id="business_info" class="rounded-xl bg-cubblue border-2 border-cubred p-3 
+            sm:flex
+            sm:flex-wrap
+            sm:gap-2
 
-              <div class="flex flex-col lg:flex-row">
-              <div class="w-full lg:w-8/12 mr-4">
+            lg:gap-0
+            lg:gap-x-2 
+            lg:w-1/2
+            ">
+
+              <div class="flex flex-col w-full sm:w-2/3 lg:w-full">
                 <label for="service_provided" class="text-white">Service Provided</label>
-                <input type="text" name="service_provided" id="service_provided" placeholder="Service Provided" class="bg-white w-full my-2 p-3" value="">
+                <input type="text" name="service_provided" id="service_provided" placeholder="Service Provided" class="bg-white my-2 p-3" value="">
               </div>
 
-              <div class="w-full lg:w-2/12">
-                <label for="minority_ownership" class="text-white">Minority Ownership</label>
-                <br>
-                <select type="text" name="minority_ownership" id="minority_ownership" placeholder="Minority Owned" class="bg-white w-3/12 sm:w-2/12 lg:w-1/2 my-2 p-3 h-12" value="">
+              <div class="flex flex-col w-full sm:w-1/4 lg:w-2/4 sm:flex-auto lg:flex-none">
+                <label for="minority_ownership" class="text-white sm:w-full">Minority Ownership</label>
+                <select type="text" name="minority_ownership" id="minority_ownership" placeholder="Minority Owned" class="bg-white my-2 w-1/4 sm:w-3/6 p-3 h-12" value="">
                   <option value="true">Yes</option>
                   <option value="false">No</option>
                 </select>
               </div>
-            </div>
 
-            <div class="flex flex-col lg:flex-row">
-              <div class="w-full lg:flew-row mr-4">
+              <div class="flex flex-col w-full sm:w-1/2 md:w-1/2">
                 <label for="authorized_name" class="text-white">Authorized Name</label>
-                <br>
-                <input type="text" name="authorized_name" id="authorized_name" placeholder="Authorized Name" class="bg-white w-full lg:w-7/12 my-2 p-3" value="">
-
-                <label for="authorized_phone_number" class="text-white">Authorized Phone Number</label>
-                <br>
-                <input type="text" name="authorized_phone_number" id="authorized_phone_number" placeholder="Authorized Phone Number" class="bg-white w-full lg:w-2/12 my-2 p-3" value=""> 
+                <input type="text" name="authorized_name" id="authorized_name" placeholder="Authorized Name" class="bg-white my-2 p-3" value="">
               </div>
 
-              <div class="w-full">
+              <div class="flex flex-col w-full sm:w-1/3 sm:flex-auto md:w-1/3">
+                <label for="authorized_phone_number" class="text-white">Authorized Phone Number</label>
+                <input type="text" name="authorized_phone_number" id="authorized_phone_number" placeholder="Authorized Phone Number" class="bg-white w-full my-2 p-3" value=""> 
+              </div>
+
+              <div class="flex flex-col w-full sm:h-64">
                 <label for="authorized_signature" class="text-white">Authorized Signature</label>
-                <canvas id="signatureCanvas" class="border bg-white w-full my-2" width="400" height="150"></canvas>
-                <button type="button" id="clearSignature" class="bg-cubred rounded px-2 text-white">Clear Signature</button>
+                <canvas id="signatureCanvas" class="border bg-white my-2 sm:w-full sm:h-3/4"></canvas>
+                <button type="button" id="clearSignature" class="bg-cubred rounded px-2 sm:w-1/3 lg:w-1/3 text-white">Clear Signature</button>
                 <input type="hidden" name="authorized_signature" id="authorized_signature">
               </div>
-            </div>
           </div> 
           
           {{!-- BANK Info --}}
-          <div id="bank_info" class="bg-cubblue border-2 rounded-xl border-cubred p-3 xl:w-1/2 xl:flex-auto">
+          <div id="bank_info" class="bg-cubblue border-2 rounded-xl border-cubred p-3 
+          sm:flex
+          sm:flex-wrap
+          sm:gap-x-2
+          lg:w-1/2
+          lg:h-2/3
+          lg:flex
+          lg:flex-col 
+          xl:flex-auto">
 
-            <label for="bank_name" class="text-white">Bank Name</label>
-            <input type="text" name="bank_name" id="bank_name" placeholder="Bank Name" class="bg-white my-2 p-3 w-full" value="">
-
-            <div class="sm:flex justify-evenly">
-              <div class="w-full sm:w-6/12 mr-1">
-                <label for="account_number" class="text-white">Account Number</label>
-                <br>
-                <input type="text" name="account_number" id="account_number" placeholder="Account Number" class="bg-white my-2 p-3 w-full sm:w-full" value="">
-              </div>
-
-              <div class="w-full sm:w-6/12 ml-1">
-                <label for="routing_number" class="text-white">Routing Number</label>
-                <br>
-                <input type="number" name="routing_number" id="routing_number" placeholder="Routing Number" class="bg-white my-2 p-3 w-full sm:w-full" value="">
-              </div>
+            <div class="flex flex-col w-full lg:w-full">
+              <label for="bank_name" class="text-white">Bank Name</label>
+              <input type="text" name="bank_name" id="bank_name" placeholder="Bank Name" class="bg-white my-2 p-3" value="">
             </div>
-          </div>
-          </div>
 
+            <div class="flex flex-col w-full sm:w-6/12 lg:w-full">
+              <label for="account_number" class="text-white">Account Number</label>
+              <input type="text" name="account_number" id="account_number" placeholder="Account Number" class="bg-white my-2 p-3 w-full sm:w-full" value="">
+            </div>
+
+            <div class="flex flex-col w-full sm:w-3/12 lg:w-full flex-auto">
+              <label for="routing_number" class="text-white">Routing Number</label>
+              <input type="number" name="routing_number" id="routing_number" placeholder="Routing Number" class="bg-white my-2 p-3" value="">
+            </div>
+        </div>
+
+      </div>
+         
         <div class="py-2 signup">
           <button type="submit" id="newVendorSubmit" class="hover:bg-cubred bg-cubblue border-cubred border-2 text-white px-4 py-3 rounded-xl font-medium w-full">Submit</button>
+         </div>
         </div>
-      </div> 
+        </div>
+       </div>
     </form>
-  </div>   
-</div>   
+  </div>
+</div>
+  
+  
 
 
 <script src="/js/vendorSignup.js"></script>
