@@ -50,7 +50,6 @@ module.exports = {
         account_number,
         routing_number
       });
-
       res.status(200).json(vendorData);
     } catch (err) {
       res.status(500).json({ error: 'Internal Server Error' });

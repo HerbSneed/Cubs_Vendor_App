@@ -1,43 +1,33 @@
-const canvas = document.querySelector("#signatureCanvas");
-const signatureInput = document.querySelector("#authorized_signature");
+var canvas = document.getElementById("signature-pad");
+var signatureInput = document.querySelector("#authorized_signature");
+var clearSignatureButton = document.querySelector("#clearSignature");
 
-
-let isSigning = false;
-let context = canvas.getContext("2d");
-
-canvas.addEventListener("mousedown", startSignature);
-canvas.addEventListener("mousemove", drawSignature);
-canvas.addEventListener("mouseup", endSignature);
-canvas.addEventListener("mouseout", endSignature);
-
-function startSignature(event) {
-  isSigning = true;
-  const canvasRect = canvas.getBoundingClientRect();
-  context.beginPath();
-  context.moveTo(event.clientX - canvasRect.left, event.clientY - canvasRect.top);
+function resizeCanvas() {
+  var ratio = Math.max(window.devicePixelRatio || 1, 1);
+  canvas.width = canvas.offsetWidth * ratio;
+  canvas.height = canvas.offsetHeight * ratio;
+  canvas.getContext("2d").scale(ratio, ratio);
 }
 
-function drawSignature(event) {
-  if (isSigning) {
-    const canvasRect = canvas.getBoundingClientRect();
-    context.lineTo(event.clientX - canvasRect.left, event.clientY - canvasRect.top);
-    context.stroke();
-  }
-}
-function endSignature() {
-  isSigning = false;
-  // Set the signature value in the hidden input field as a base64-encoded image data URL
-  signatureInput.value = canvas.toDataURL();
-}
+window.onresize = resizeCanvas;
+resizeCanvas();
 
-function clearSignature() {
-  context.clearRect(0, 0, canvas.width, canvas.height);
-  signatureInput.value = "";
-}
+var signaturePad = new SignaturePad(canvas, {
+  backgroundColor: 'rgb(250, 250, 250)'
+});
+
+clearSignatureButton.addEventListener('click', function () {
+  signaturePad.clear();
+  signatureInput.value = ""; 
+});
+
+document.querySelector('#vendorForm').addEventListener('submit', function (event) {
+  event.preventDefault();
+  signatureInput.value = signaturePad.toDataURL();
+});
 
 async function newVendorHandler(event) {
   event.preventDefault();
-  console.log('newVendorHandler called');
   const vendor_name = document.querySelector('#vendor').value.trim();
   const contact_firstName = document.querySelector('#contact_f_name').value.trim();
   const contact_lastName = document.querySelector('#contact_l_name').value.trim();
@@ -57,71 +47,45 @@ async function newVendorHandler(event) {
   const bank_name = document.querySelector('#bank_name').value.trim();
   const account_number = document.querySelector('#account_number').value.trim();
   const routing_number = document.querySelector('#routing_number').value.trim();
-  if (
-    vendor_name && 
-    contact_firstName && 
-    contact_lastName && 
-    contact_MiddleInt && 
-    contact_phone_number && 
-    tax_id && 
-    remittance_address && 
-    city && 
-    state && 
-    zip_code && 
-    country && 
-    remittance_email &&
-    service_provided && 
-    minority_ownership &&
-    authorized_name && 
-    authorized_phone_number && 
-    signatureInput.value.trim() !== '' && 
-    bank_name &&
-    account_number &&
-    routing_number
-    ) {
-    const response = await fetch('api/vendor', {
-      method: 'POST',
-      body: JSON.stringify({
-        vendor_name,
-        contact_firstName, 
-        contact_lastName,
-        contact_MiddleInt,
-        tax_id, 
-        contact_phone_number,   
-        remittance_address, 
-        city,
-        state,
-        zip_code,
-        country,
-        remittance_email,
-        service_provided,
-        minority_ownership,
-        authorized_name,
-        authorized_phone_number,
-        authorized_signature: signatureInput.value,
-        bank_name,
-        account_number,
-        routing_number
-      }),
-      headers: {
-        'Content-Type': 'application/json'
-      }
-    });
-    const data = JSON.stringify(response);
-    console.log("DATA" + data);
-    if (response.ok) {
-      document.location.replace('/submitted');
-    } else {
-      alert('Failed to sign up');
+
+  const vendorinfo = await fetch('api/vendor', {
+    method: 'POST',
+    body: JSON.stringify({
+      vendor_name,
+      contact_firstName,
+      contact_lastName,
+      contact_MiddleInt,
+      contact_phone_number,
+      tax_id,
+      remittance_address,
+      city,
+      state,
+      zip_code,
+      country,
+      remittance_email,
+      service_provided,
+      minority_ownership,
+      authorized_name,
+      authorized_phone_number,
+      authorized_signature: signatureInput.value,
+      bank_name,
+      account_number,
+      routing_number
+    }),
+    headers: {
+      'Content-Type': 'application/json'
     }
+  });
+  if (vendorinfo.ok) {
+    document.location.replace('/submitted');
+  } else {
+    alert('Failed to sign up. Please check your input and try again.')
   }
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  // Add an event listener to the form submission
   document.querySelector('#vendorForm').addEventListener('submit', newVendorHandler);
-
-  // Add an event listener to the "Clear Signature" button
   document.querySelector('#clearSignature').addEventListener('click', clearSignature);
 });
+
 

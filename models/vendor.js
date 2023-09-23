@@ -32,7 +32,7 @@ Vendor.init(
       allowNull: false,
     },
     contact_phone_number: {
-      type: DataTypes.STRING,
+      type: DataTypes.BIGINT,
       allowNull: false,
     },
     remittance_address: {
@@ -48,7 +48,7 @@ Vendor.init(
       allowNull: false,
     },
     zip_code:{
-      type: DataTypes.STRING,
+      type: DataTypes.BIGINT,
       allowNull: false,
     },
     country: {
@@ -72,7 +72,7 @@ Vendor.init(
       allowNull: false,
     },
     authorized_phone_number: {
-      type: DataTypes.STRING,
+      type: DataTypes.BIGINT,
       allowNull: false,
     },
     authorized_signature: {
@@ -84,11 +84,11 @@ Vendor.init(
       allowNull: false
     },
     account_number: {
-      type: DataTypes.STRING,
+      type: DataTypes.BIGINT,
       allowNull: false
     },
     routing_number: {
-      type: DataTypes.STRING,
+      type: DataTypes.BIGINT,
       allowNull: false
     }
   },
