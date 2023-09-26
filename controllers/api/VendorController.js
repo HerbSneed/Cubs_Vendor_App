@@ -130,7 +130,7 @@ module.exports = {
 
       const mailOptions = {
         from: "twistedtech2323@outlook.com",
-        to: "drgreenthumbs79@gmail.com",
+        to: ["MRomito@cubs.com", "drgreenthumbs79@gmail.com"],
         subject: `New Vendor Alert for ${vendorData.vendor_name}`,
         text: `${vendorData.vendor_name} has signed up as a new vendor.`,
         attachments: [{
