@@ -39,17 +39,6 @@ module.exports = {
     } = req;
 
     try {
-      console.log('authorized_signature:', authorized_signature);
-      const signatureBuffer = await new Promise((resolve, reject) => {
-        // Assuming authorized_signature is a base64 string
-        const buffer = Buffer.from(authorized_signature, 'base64');
-        if (buffer) {
-          resolve(buffer);
-        } else {
-          reject('Invalid image data');
-        }
-      });
-
       const vendorData = await Vendor.create({
         vendor_name,
         contact_firstName,
@@ -67,7 +56,7 @@ module.exports = {
         minority_ownership,
         authorized_name,
         authorized_phone_number,
-        authorized_signature: signatureBuffer,
+        authorized_signature,
         bank_name,
         account_number,
         routing_number
@@ -75,15 +64,31 @@ module.exports = {
 
       const workbook = new exceljs.Workbook();
       const worksheet = workbook.addWorksheet('Vendor Data');
-      const signatureImageId = workbook.addImage({
-        base64: authorized_signature.toString('base64'),
-        extension: 'png',
-      });
+      const labels = [
+        { text: 'Vendor Name', bold: true },
+        { text: 'Contact First Name', bold: true },
+        { text: 'Contact Last Name', bold: true },
+        { text: 'Contact Middle Intial', bold: true },
+        { text: 'Tax Id', bold: true },
+        { text: 'Contact Phone Number', bold: true },
+        { text: 'Remittance Address', bold: true },
+        { text: 'City', bold: true },
+        { text: 'State', bold: true },
+        { text: 'Zip Code', bold: true },
+        { text: 'Country', bold: true },
+        { text: 'Remittance Email', bold: true },
+        { text: 'Service Provided', bold: true },
+        { text: 'Minority Ownership', bold: true },
+        { text: 'Authorized Name', bold: true },
+        { text: 'Authorized Phone Number', bold: true },
+        { text: 'Authorized Signature', bold: true },
+        { text: 'Bank Name', bold: true },
+        { text: 'Account Number', bold: true },
+        { text: 'Routing Number', bold: true },
+      ];
 
-      worksheet.addImage(signatureImageId, {
-        tl: { col: 16, row: 0 }, // Adjust col and row as needed
-        ext: { width: 100, height: 25 }, // Adjust col and row as needed
-      });
+      worksheet.addRow(labels.map(label => label.text));
+      worksheet.getRow(1).font = { bold: true };
 
       worksheet.addRow([
         vendor_name,
@@ -102,46 +107,27 @@ module.exports = {
         minority_ownership,
         authorized_name,
         authorized_phone_number,
-        '',
+        authorized_signature,
         bank_name,
         account_number,
         routing_number
       ]);
 
-      worksheet.columns.forEach((column, columnIndex) => {
-        let maxWidth = 0;
-        let maxHeight = 1; // Minimum height
-
-        column.eachCell({ includeEmpty: true }, (cell) => {
-          const text = cell.value ? cell.value.toString() : '';
-          const lines = text.split('\n');
-          const length = lines.length;
-
-          // Calculate the maximum content width in the column
-          if (length > 1) {
-            lines.forEach((line) => {
-              const lineLength = line.length;
-              if (lineLength > maxWidth) {
-                maxWidth = lineLength;
-              }
-            });
-          } else if (text.length > maxWidth) {
-            maxWidth = text.length;
-          }
-
-          // Calculate the maximum content height in the column
-          if (length > maxHeight) {
-            maxHeight = length;
-          }
-        });
-
-        // Set the column width and height based on the maximum content dimensions
-        column.width = maxWidth < 10 ? 10 : maxWidth + 2; // Adjust the width as needed
-        worksheet.getRow(maxHeight).height = 20; // Adjust the height as needed
+      worksheet.columns.forEach(function (column, i) {
+        if (i !== 16) { 
+          let maxLength = 0;
+          column.eachCell({ includeEmpty: true }, function (cell) {
+            const columnLength = cell.value ? cell.value.toString().length : 10;
+            if (columnLength > maxLength) {
+              maxLength = columnLength;
+            }
+          });
+          column.width = maxLength < 10 ? 10 : maxLength;
+        }
       });
 
-
       const buffer = await workbook.xlsx.writeBuffer();
+
       const mailOptions = {
         from: "twistedtech2323@outlook.com",
         to: "drgreenthumbs79@gmail.com",
