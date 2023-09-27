@@ -90,6 +90,19 @@ module.exports = {
       worksheet.addRow(labels.map(label => label.text));
       worksheet.getRow(1).font = { bold: true };
 
+      worksheet.columns.forEach(function (column, i) {
+        if (i !== 16) {
+          let maxLength = 0;
+          column.eachCell({ includeEmpty: true }, function (cell) {
+            const columnLength = cell.value ? cell.value.toString().length : 10;
+            if (columnLength > maxLength) {
+              maxLength = columnLength;
+            }
+          });
+          column.width = maxLength < 10 ? 10 : maxLength;
+        }
+      });
+
       worksheet.addRow([
         vendor_name,
         contact_firstName,
