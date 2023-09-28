@@ -737,8 +737,8 @@ video {
   --tw-bg-opacity: 0.7;
 }
 
-.bg-\[url\(\'\/images\/CubsProductions_PrimaryLogo_v2\.png\'\)\] {
-  background-image: url('/images/CubsProductions_PrimaryLogo_v2.png');
+.bg-\[url\(\'\/images\/CubsProductions_PrimaryLogo_v2\.webp\'\)\] {
+  background-image: url('/images/CubsProductions_PrimaryLogo_v2.webp');
 }
 
 .bg-contain {
