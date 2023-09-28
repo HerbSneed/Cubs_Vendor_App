@@ -556,6 +556,10 @@ video {
   margin-bottom: 0.5rem;
 }
 
+.-mt-1 {
+  margin-top: -0.25rem;
+}
+
 .mr-2 {
   margin-right: 0.5rem;
 }
@@ -584,8 +588,8 @@ video {
   height: 3rem;
 }
 
-.h-\[18\%\] {
-  height: 18%;
+.h-\[16\%\] {
+  height: 16%;
 }
 
 .min-h-screen {
@@ -618,6 +622,10 @@ video {
 
 .w-6\/12 {
   width: 50%;
+}
+
+.w-\[100\.5\%\] {
+  width: 100.5%;
 }
 
 .w-full {
@@ -660,6 +668,10 @@ video {
 
 .gap-y-2 {
   row-gap: 0.5rem;
+}
+
+.overflow-hidden {
+  overflow: hidden;
 }
 
 .rounded {
