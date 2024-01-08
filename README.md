@@ -17,7 +17,15 @@ THEN the USER can exit the application or sign up another vendor
 ## App Functionality
 
 ```md
-Once on the platform, the user completes all the necessary sections of the form, providing essential information for vendor registration. Upon clicking the Submit button, the user is redirected to a warm and welcoming "Welcome to the Family" page, signaling the successful completion of the registration process. From here, the user can either exit the application, having accomplished their registration goal, or proceed to sign up for another vendor. Once the form or forms are submitted, accounting receives an email with an Excel document attached that can be easily copied and pasted into the existing Excel documents for tracking vendors. This user-friendly functionality enhances the overall experience, ensuring efficiency and ease of use for the Chicago Cubs Video Production Department and its vendors.
+Once on the platform, the user completes all the necessary sections of the form,
+providing essential information for vendor registration. Upon clicking the Submit
+button, the user is redirected to a warm and welcoming "Welcome to the Family" page, signaling the successful completion of the registration process. From here, the user
+can either exit the application, having accomplished their registration goal, or
+proceed to sign up for another vendor. Once the form or forms are submitted,
+accounting receives an email with an Excel document attached that can be easily
+copied and pasted into the existing Excel documents for tracking vendors. This user-
+friendly functionality enhances the overall experience, ensuring efficiency and ease
+of use for the Chicago Cubs Video Production Department and its vendors.
 ```
 
 ## Technology
