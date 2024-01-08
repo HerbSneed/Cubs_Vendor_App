@@ -27,5 +27,6 @@ TailwindCSS, HTML, Handlebars.js, JavaScript, Sequelize, NodeJS, BCrypt, NodeMai
 ## Links
 
 GitHub: [https://github.com/HerbSneed/Cubs_Vendor_App](url)
+
 Deployment: [https://cubs-vendor-app-258d3c7c3af4.herokuapp.com/](url)
 
